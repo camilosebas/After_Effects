@@ -1,0 +1,8 @@
+//Posición X
+thisComp.layer("Nnombre del Layer").transform.xPosition + 150
+
+//Posición Y
+thisComp.layer(8).transform.yPosition
+
+//Bandera de colombia con respecto a la Posición del bumper
+thisComp.layer("Shape Layer 1").transform.position[0] - 800
