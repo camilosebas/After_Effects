@@ -1,8 +1,33 @@
+//BANDERA COLOMBIA
 //Posición X
-thisComp.layer("Nnombre del Layer").transform.xPosition + 150
+thisComp.layer("Shape Layer 1").transform.position[0] - 800
+
+//Posición Y = a la posición del bumper / la mitad de su altura.
+	thisComp.layer("Shape Layer 1").transform.yPosition
+	+ (
+		(thisComp.layer("Shape Layer 1").content("Rectangle 1").content("Rectangle Path 1").size[1])
+	/2)
+
+
+//Null => "Control Nombre Cargo"
+//Posición X
+thisComp.layer("Shape Layer 1").transform.xPosition + 740
 
 //Posición Y
-thisComp.layer(8).transform.yPosition
+	thisComp.layer("Shape Layer 1").transform.yPosition
+	+ (
+		(thisComp.layer("Shape Layer 1").content("Rectangle 1").content("Rectangle Path 1").size[1])
+	/2)
 
-//Bandera de colombia con respecto a la Posición del bumper
-thisComp.layer("Shape Layer 1").transform.position[0] - 800
+
+//Ajuste para el nombre y cargo
+//Posición XYZ hacia el Null
+x = thisComp.layer("Control Nombre Cargo").transform.xPosition;
+y = thisComp.layer("Shape Layer 1").transform.yPosition;
+z = thisComp.layer("Control Nombre Cargo").transform.zPosition;
+[x,y,z]
+
+//Ajuste Anchor horizontal y vertical
+x = sourceRectAtTime().left + sourceRectAtTime().width;
+y = sourceRectAtTime().top/2 + effect("Ajuste Vertical")("Slider");
+[x,y]

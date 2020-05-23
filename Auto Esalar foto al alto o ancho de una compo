@@ -1,0 +1,10 @@
+//Auto escalar una foto al alto de la composición
+sizeX = 100*thisComp.width/thisLayer.width;
+sizeY = 100*thisComp.height/thisLayer.height;
+[sizeX,sizeY]
+
+
+//Auto escalar una foto al alto de la composición preservando la proporción
+sizeX = 100*thisComp.width/thisLayer.width;
+sizeY = 100*thisComp.height/thisLayer.height;
+[sizeY,sizeY]

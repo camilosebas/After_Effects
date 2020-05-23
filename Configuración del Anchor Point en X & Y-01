@@ -1,0 +1,12 @@
+// Configuración automática del anchor point
+//Posición X y Y con respecto al Null con llamando al ajute de un conrolador con slider.
+x = thisComp.layer("Control Nombre Cargo").transform.anchorPoint[0] + effect("Ajuste Horizontal")("Slider");
+y = thisComp.layer("Control Nombre Cargo").transform.anchorPoint[1] + effect("Ajuste vertical")("Slider");
+z = thisComp.layer("Control Nombre Cargo").transform.anchorPoint[2];
+[x,y,z]
+
+// Configuración automática de posición
+x = thisComp.layer("Control Nombre Cargo").transform.xPosition;
+y = thisComp.layer("Control Nombre Cargo").transform.yPosition;
+z = thisComp.layer("Control Nombre Cargo").transform.zPosition;
+[x,y,z]

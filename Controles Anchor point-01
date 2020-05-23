@@ -1,0 +1,4 @@
+//Mantener el ancor point siempre al centro
+x = sourceRectAtTime().left + sourceRectAtTime().width/2;
+y = sourceRectAtTime().top + sourceRectAtTime().height/2;
+[x,y]
