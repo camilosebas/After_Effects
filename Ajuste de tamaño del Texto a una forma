@@ -1,0 +1,42 @@
+//TEXTO DEFINITIVO QUE VA EN EL LAYER DE TEXTO
+//Control de márgenes al cuadrado de fondo
+xMargin = effect("X Margenes")("Slider").value * 2;
+yMargin = effect("Y Margenes")("Slider").value * 2;
+
+//Usar controladores para controlar el tamaño de un texto
+xSize = effect("X Size")("Slider").value - xMargin;
+ySize = effect("Y Size")("Slider").value - yMargin;
+
+x = xSize / sourceRectAtTime().width * 100;
+y = ySize / sourceRectAtTime().height * 100;
+
+//Controlador de escala cuado el texto es más pequeño que el ancho de la forma
+smallestValue = Math.min(x, y);
+
+[smallestValue, smallestValue]
+
+
+//Ajustar el ancor siempre al centro
+x = sourceRectAtTime().left + sourceRectAtTime().width/2;
+y = sourceRectAtTime().top + sourceRectAtTime().height/2;
+
+[x,y]
+
+//Usar controladores para controlar el tamaño de un texto
+xSize = effect("X Size")("Slider").value;
+ySize = effect("Y Size")("Slider").value;
+
+x = xSize / sourceRectAtTime().width * 100;
+y = ySize / sourceRectAtTime().height * 100;
+[x,y]
+
+//Configurar la forma de un cuadrado a sus controladores en X y Y
+[effect("X Size")("Slider").value,effect("Y Size")("Slider").value]
+
+//Controlador de escala cuado el texto es más pequeño que el ancho de la forma
+smallestValue = Math.min(x, y);
+
+[smallestValue, smallestValue]
+
+
+

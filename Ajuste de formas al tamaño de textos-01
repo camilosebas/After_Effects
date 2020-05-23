@@ -1,0 +1,25 @@
+// Igualar la forma de un botón al tamaño horizontal de texto
+sizeX = content("Rectangle 1").content("Rectangle Path 1").size[0];
+sizeY = content("Rectangle 1").content("Rectangle Path 1").size[1];
+
+sizeX = sourceRectAtTime().width;
+sizeY = sourceRectAtTime().top + sourceRectAtTime().height;
+
+[sizeX, sizeY]
+
+
+
+Versión anterior que funciona:
+// Igualar la forma de un botón al tamaño horizontal de texto
+tamHorizontal = content("Rectangle 1").content("Rectangle Path 1").size;
+tamTextHorizontal = thisComp.layer("¿sabes en qué consiste la").width;
+tamHorizontal = tamHorizontal + tamTextHorizontal;
+
+Datos reales:
+
+temp = content("Rectangle 1").content("Rectangle Path 1").size[0];
+[temp, temp]
+
+Tamaño objetivo:
+x = 892.1014
+y = 138.683
